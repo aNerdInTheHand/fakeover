@@ -8,7 +8,8 @@ import {
   selectClubFunds,
   selectExternalOpinion,
   selectFanHappiness,
-  selectPersonalWealth
+  selectPersonalWealth,
+  selectScore
 } from './metricsSlice'
 import styles from './Metrics.module.css'
 
@@ -17,18 +18,14 @@ export function Metrics() {
   const externalOpinion = useSelector(selectExternalOpinion)
   const fanHappiness = useSelector(selectFanHappiness)
   const personalWealth = useSelector(selectPersonalWealth)
+  const score = useSelector(selectScore)
   const dispatch = useDispatch()
   const [incrementAmount, setIncrementAmount] = useState('2')
 
   return (
-    <div>
+    <div className='feature'>
       <div className={styles.row}>
-        <input
-          className={styles.textbox}
-          aria-label='Set increment amount'
-          value={incrementAmount}
-          onChange={e => setIncrementAmount(e.target.value)}
-        />
+        <span className='score'>Score: {score}</span>
       </div>
       <div className={styles.row}>
         <span className={styles.value}>Club Funds: {clubFunds}</span>

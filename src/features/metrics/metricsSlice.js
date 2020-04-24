@@ -6,7 +6,8 @@ export const metricsSlice = createSlice({
     clubFunds: 50000000,
     externalOpinion: 70,
     fanHappiness: 70,
-    personalWealth: 100000000
+    personalWealth: 100000000,
+    score: 0
   },
   reducers: {
     // Redux Toolkit allows us to write "mutating" logic in reducers. It
@@ -24,6 +25,9 @@ export const metricsSlice = createSlice({
     },
     changePersonalWealth: (state, action) => {
       state.personalWealth += action.payload
+    },
+    changeScore: (state, action) => {
+      state.score += action.payload
     }
   }
 })
@@ -32,7 +36,8 @@ export const {
   changeClubFunds,
   changeExternalOpinion,
   changeFanHappiness,
-  changePersonalWealth
+  changePersonalWealth,
+  changeScore
 } = metricsSlice.actions
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -52,5 +57,6 @@ export const selectClubFunds = state => state.metrics.clubFunds
 export const selectExternalOpinion = state => state.metrics.externalOpinion
 export const selectFanHappiness = state => state.metrics.fanHappiness
 export const selectPersonalWealth = state => state.metrics.personalWealth
+export const selectScore = state => state.metrics.score
 
 export default metricsSlice.reducer
