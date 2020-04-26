@@ -6,6 +6,7 @@ export const metricsSlice = createSlice({
     clubFunds: 50000000,
     externalOpinion: 70,
     fanHappiness: 70,
+    leaguePosition: 11,
     personalWealth: 100000000,
     score: 0
   },
@@ -14,17 +15,12 @@ export const metricsSlice = createSlice({
     // doesn't actually mutate the state because it uses the Immer library,
     // which detects changes to a "draft state" and produces a brand new
     // immutable state based off those changes
-    changeClubFunds: (state, action) => {
-      state.clubFunds += action.payload
-    },
-    changeExternalOpinion: (state, action) => {
-      state.externalOpinion += action.payload
-    },
-    changeFanHappiness: (state, action) => {
-      state.fanHappiness += action.payload
-    },
-    changePersonalWealth: (state, action) => {
-      state.personalWealth += action.payload
+    changeMetrics: (state, action) => {
+      state.clubFunds += action.payload.clubFunds
+      state.externalOpinion += action.payload.externalOpinion
+      state.fanHappiness += action.payload.fanHappiness
+      state.leaguePosition += action.payload.leaguePosition
+      state.personalWealth += action.payload.personalWealth
     },
     changeScore: (state, action) => {
       state.score += action.payload
@@ -33,10 +29,7 @@ export const metricsSlice = createSlice({
 })
 
 export const {
-  changeClubFunds,
-  changeExternalOpinion,
-  changeFanHappiness,
-  changePersonalWealth,
+  changeMetrics,
   changeScore
 } = metricsSlice.actions
 
@@ -56,6 +49,7 @@ export const {
 export const selectClubFunds = state => state.metrics.clubFunds
 export const selectExternalOpinion = state => state.metrics.externalOpinion
 export const selectFanHappiness = state => state.metrics.fanHappiness
+export const selectLeaguePosition = state => state.metrics.leaguePosition
 export const selectPersonalWealth = state => state.metrics.personalWealth
 export const selectScore = state => state.metrics.score
 

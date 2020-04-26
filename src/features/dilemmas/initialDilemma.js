@@ -6,6 +6,7 @@ export const initialDilemma = {
         clubFunds: 10000000,
         externalOpinion: 0,
         fanHappiness: 10,
+        leaguePosition: 1,
         personalWealth: -7500000
       },
       buttonText: 'Accept Deal',
@@ -16,6 +17,7 @@ export const initialDilemma = {
         clubFunds: -250000,
         externalOpinion: 2,
         fanHappiness: -10,
+        leaguePosition: 0,
         personalWealth: 500000
       },
       buttonText: 'Reject Deal',
@@ -26,10 +28,11 @@ export const initialDilemma = {
         clubFunds: -2000000,
         externalOpinion: 0,
         fanHappiness: -15,
+        leaguePosition: -1,
         personalWealth: 1000000
       },
       buttonText: 'Accept Deal, then renege',
-      resultText: 'Fans are outraged as you accept a bumper sponsorship deal, only to backtrack in order to keep advertising your cheap tat for free. Pundits refuse to criticise you by and large. Gates are down at the next two games and an additional sponsor withdraws support, but on the plus side worldwide sales of your goods increase. Any publicity is good publicity!'
+      resultText: 'Fans protest as you accept a bumper sponsorship deal, only to backtrack in order to keep advertising your cheap tat for free. Pundits refuse to criticise you by and large. Gates are down at the next two games and an additional sponsor withdraws support, but on the plus side worldwide sales of your goods increase. Any publicity is good publicity!'
     }
   ]
 }

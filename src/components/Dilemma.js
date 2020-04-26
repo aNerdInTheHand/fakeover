@@ -1,7 +1,7 @@
 import React from 'react'
 
 const getDilemma = props => (
-  <div className='dilemmas'>
+  <div className='dilemmas row'>
     <span className='dilemma-text'>{props.dilemma.text}</span>
     <button
       className='dilemma-button'

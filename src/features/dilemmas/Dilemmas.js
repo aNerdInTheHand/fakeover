@@ -36,7 +36,7 @@ const showOptions = dilemma => (
 const getDilemma = (setShowDilemma, showDilemma) => (
   <div>
     <button
-      className='get-dilemma-button'
+      className='dilemma-button'
       onClick={() => setShowDilemma(!showDilemma)}
     >
       Next Day

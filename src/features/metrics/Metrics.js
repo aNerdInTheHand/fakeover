@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {
-  changeClubFunds,
-  changeExternalOpinion,
-  changeFanHappiness,
-  changePersonalWealth,
+  changeMetrics,
   selectClubFunds,
   selectExternalOpinion,
   selectFanHappiness,
+  selectLeaguePosition,
   selectPersonalWealth,
   selectScore
 } from './metricsSlice'
@@ -17,6 +15,7 @@ export function Metrics() {
   const clubFunds = useSelector(selectClubFunds)
   const externalOpinion = useSelector(selectExternalOpinion)
   const fanHappiness = useSelector(selectFanHappiness)
+  const leaguePosition = useSelector(selectLeaguePosition)
   const personalWealth = useSelector(selectPersonalWealth)
   const score = useSelector(selectScore)
   const dispatch = useDispatch()
@@ -29,47 +28,58 @@ export function Metrics() {
       </div>
       <div className={styles.row}>
         <span className={styles.value}>Club Funds: {clubFunds}</span>
-        <button
+        {/* <button
           className={styles.button}
           onClick={() =>
-            dispatch(changeClubFunds(Number(incrementAmount) || 0))
+            dispatch(changeMetrics(Number(incrementAmount) || 0))
           }
         >
           Change Club Funds
-        </button>
+        </button> */}
       </div>
       <div className={styles.row}>
         <span className={styles.value}>External Opinion: {externalOpinion}</span>
-        <button
+        {/* <button
           className={styles.button}
           onClick={() =>
-            dispatch(changeExternalOpinion(Number(incrementAmount) || 0))
+            dispatch(changeMetrics(Number(incrementAmount) || 0))
           }
         >
           Change External Opinion
-        </button>
+        </button> */}
       </div>
       <div className={styles.row}>
         <span className={styles.value}>Fan Happiness: {fanHappiness}</span>
-        <button
+        {/* <button
           className={styles.button}
           onClick={() =>
-            dispatch(changeFanHappiness(Number(incrementAmount) || 0))
+            dispatch(changeMetrics(Number(incrementAmount) || 0))
           }
         >
           Change Fan Happiness
-        </button>
+        </button> */}
+      </div>
+      <div className={styles.row}>
+        <span className={styles.value}>League Position: {leaguePosition}</span>
+        {/* <button
+          className={styles.button}
+          onClick={() =>
+            dispatch(changeMetrics(Number(incrementAmount) || 0))
+          }
+        >
+          Change Fan Happiness
+        </button> */}
       </div>
       <div className={styles.row}>
         <span className={styles.value}>Personal Wealth: {personalWealth}</span>
-        <button
+        {/* <button
           className={styles.button}
           onClick={() =>
-            dispatch(changePersonalWealth(Number(incrementAmount) || 0))
+            dispatch(changeMetrics(Number(incrementAmount) || 0))
           }
         >
           Change Personal Wealth
-        </button>
+        </button> */}
       </div>
     </div>
   )

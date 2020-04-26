@@ -10,11 +10,17 @@ const content = () => (
       <ul>
         <li>increasing your personal wealth by leeching as much money out of the club as possible</li>
         <li>reducing fan happiness as much as possible and as frequently as possible</li>
-        <li>keeping external opinion of yourself higher than fan happiness.</li>
+        <li>keeping the team as close to 17th in the table as possible without dropping into the bottom three</li>
+        <li>keeping pundit opinion of yourself higher than fan happiness.</li>
       </ul>
     </div>
     <div>
-      The game will be over if fan happiness is too high for too long or reaches 0, or the club funds or your personal value hit £0.
+      The game will be over if:
+      <ul>
+        <li>fan happiness is too high for too long or reaches 0</li>
+        <li>the club funds or your personal value hit £0</li>
+        <li>the club is relegated (finishes below 17th).</li>
+      </ul>
     </div>
   </div>
 )
